@@ -1,47 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taehyun2 <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/26 15:47:42 by taehyun2          #+#    #+#             */
-/*   Updated: 2023/09/05 16:17:50 by taehyun2         ###   ########.fr       */
+/*   Created: 2023/08/26 19:21:01 by taehyun2          #+#    #+#             */
+/*   Updated: 2023/09/01 15:54:49 by taehyun2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	write(1, &c, 1);
-}
+	int	i;
+	int	j;
+	int	tmp;
 
-void	ft_putnbr(int num)
-{
-	if (num == -2147483648)
+	i = 0;
+	j = size - 1;
+	while (i < size / 2)
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		num = 147483648;
+		tmp = tab[i];
+		tab[i] = tab[j];
+		tab[j] = tmp;
+		i++;
+		j--;
 	}
-	if (num < 0)
-	{
-		ft_putchar('-');
-		num *= -1;
-	}
-	if (num < 10)
-	{
-		ft_putchar(num + '0');
-		return ;
-	}
-	else
-		ft_putnbr(num / 10);
-	ft_putnbr (num % 10);
 }
-/*
-int	main(void)
-{
-	ft_putnbr(-2147483648);
-}
-*/

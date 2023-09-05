@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taehyun2 <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/26 15:47:42 by taehyun2          #+#    #+#             */
-/*   Updated: 2023/09/05 16:17:50 by taehyun2         ###   ########.fr       */
+/*   Created: 2023/08/26 19:10:44 by taehyun2          #+#    #+#             */
+/*   Updated: 2023/09/01 15:54:18 by taehyun2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,14 @@
 
 void	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	write (1, &c, 1);
 }
 
-void	ft_putnbr(int num)
+void	ft_putstr(char *str)
 {
-	if (num == -2147483648)
+	while (*str != '\0')
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		num = 147483648;
+		ft_putchar(*str);
+		str++;
 	}
-	if (num < 0)
-	{
-		ft_putchar('-');
-		num *= -1;
-	}
-	if (num < 10)
-	{
-		ft_putchar(num + '0');
-		return ;
-	}
-	else
-		ft_putnbr(num / 10);
-	ft_putnbr (num % 10);
 }
-/*
-int	main(void)
-{
-	ft_putnbr(-2147483648);
-}
-*/

@@ -1,47 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taehyun2 <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/26 15:47:42 by taehyun2          #+#    #+#             */
-/*   Updated: 2023/09/05 16:17:50 by taehyun2         ###   ########.fr       */
+/*   Created: 2023/08/26 19:18:51 by taehyun2          #+#    #+#             */
+/*   Updated: 2023/09/01 15:54:36 by taehyun2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
-}
+	int	c;
 
-void	ft_putnbr(int num)
-{
-	if (num == -2147483648)
+	c = 0;
+	while (*str != '\0')
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		num = 147483648;
+		c++;
+		str++;
 	}
-	if (num < 0)
-	{
-		ft_putchar('-');
-		num *= -1;
-	}
-	if (num < 10)
-	{
-		ft_putchar(num + '0');
-		return ;
-	}
-	else
-		ft_putnbr(num / 10);
-	ft_putnbr (num % 10);
+	return (c);
 }
-/*
-int	main(void)
-{
-	ft_putnbr(-2147483648);
-}
-*/
