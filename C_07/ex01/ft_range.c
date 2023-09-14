@@ -6,7 +6,7 @@
 /*   By: taehyun2 <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 16:42:20 by taehyun2          #+#    #+#             */
-/*   Updated: 2023/09/14 17:19:30 by taehyun2         ###   ########.fr       */
+/*   Updated: 2023/09/14 18:51:45 by taehyun2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	*ft_range(int min, int max)
 {
-	int			*arr;
 	long long	len;
+	int			*arr;
 	int			i;
 
 	if (min >= max)
