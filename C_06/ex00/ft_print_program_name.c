@@ -6,7 +6,7 @@
 /*   By: taehyun2 <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 19:40:45 by taehyun2          #+#    #+#             */
-/*   Updated: 2023/09/13 15:03:10 by taehyun2         ###   ########.fr       */
+/*   Updated: 2023/09/14 18:49:24 by taehyun2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ void	ft_putchar(char *c)
 
 int	main(int argc, char **argv)
 {
-	int	i;
-
 	if (argc == 1)
 		ft_putchar(argv[0]);
 	write(1, "\n", 1);
