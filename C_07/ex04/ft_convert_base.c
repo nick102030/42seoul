@@ -6,7 +6,7 @@
 /*   By: taehyun2 <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 12:01:16 by taehyun2          #+#    #+#             */
-/*   Updated: 2023/09/14 12:01:44 by taehyun2         ###   ########.fr       */
+/*   Updated: 2023/09/14 18:50:59 by taehyun2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	nbr_len(long long nbr, int base_len)
 {
 	int	len;
 
+	len = 0;
 	if (!nbr)
 		return (1);
 	while (nbr)
