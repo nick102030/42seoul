@@ -12,9 +12,9 @@
 
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+int ft_strlen(char *str)
 {
-	int	len;
+	int len;
 
 	len = 0;
 	while (str[len] != '\0')
@@ -22,11 +22,11 @@ int	ft_strlen(char *str)
 	return (len);
 }
 
-char	*ft_strdup(char *src)
+char *ft_strdup(char *src)
 {
-	int		i;
-	int		len;
-	char	*str;
+	int i;
+	int len;
+	char *str;
 
 	i = 0;
 	len = ft_strlen(src);
