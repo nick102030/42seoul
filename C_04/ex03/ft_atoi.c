@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 int	is_num(char c)
 {
@@ -52,4 +53,11 @@ int	ft_atoi(char *str)
 		index++;
 	}
 	return (result * minus);
+}
+
+int	main()
+{
+	printf("%d\n", ft_atoi("123"));
+	return 0;
+
 }
